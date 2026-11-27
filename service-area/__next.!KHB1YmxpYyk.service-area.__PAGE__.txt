@@ -1,0 +1,48 @@
+1:"$Sreact.fragment"
+2:"/adams-services-demo/_next/static/chunks/2xbrva1sp2916.js"
+3:"/adams-services-demo/_next/static/chunks/2fgr196c9iz-8.js"
+4:I[47458,["$2","$3"],"DemoProvider"]
+5:"$Sreact.suspense"
+6:I[63532,["$2","$3"],"DemoBar"]
+7:I[39756,["$2","$3"],"default"]
+8:I[37457,["$2","$3"],"default"]
+c:"/adams-services-demo/_next/static/chunks/1uzw6t69o6zv4.js"
+d:I[47991,["$2","$3","$c"],"PublicShell"]
+1e:"ViewportBoundary"
+1f:I[97367,["$2","$3"],"$1e"]
+20:"MetadataBoundary"
+21:I[97367,["$2","$3"],"$20"]
+22:I[27201,["$2","$3"],"IconMark"]
+:HL["/adams-services-demo/_next/static/chunks/28wof9-37d47y.css","style"]
+a:X
+11:X
+11:C
+12:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","div",null,{"className":"mx-auto max-w-6xl px-4 py-12","children":[["$","h1",null,{"className":"text-5xl tracking-wide","children":"Service area"}],["$","p",null,{"className":"mt-3 max-w-2xl text-muted","children":"These ZIPs are in the sample territory. A ZIP that is not on the list can still send an inquiry. It does not start service."}],["$","div",null,{"className":"mt-6 overflow-hidden rounded-xl border border-line bg-card","children":["$","table",null,{"className":"w-full text-sm","children":[["$","thead",null,{"className":"bg-sand text-left text-xs uppercase tracking-wide text-muted","children":["$","tr",null,{"children":[["$","th",null,{"className":"px-3 py-2","children":"ZIP"}],["$","th",null,{"className":"px-3 py-2","children":"City"}],["$","th",null,{"className":"px-3 py-2","children":"Collection day"}]]}]}],["$","tbody",null,{"children":[["$","tr","78602",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78602"}],["$","td",null,{"className":"px-3 py-3","children":"Bastrop"}],["$","td",null,{"className":"px-3 py-3","children":"Friday"}]]}],["$","tr","78612",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78612"}],["$","td",null,{"className":"px-3 py-3","children":"Bastrop"}],["$","td",null,{"className":"px-3 py-3","children":"Friday"}]]}],["$","tr","78662",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78662"}],["$","td",null,{"className":"px-3 py-3","children":"Red Rock"}],"$L13"]}],"$L14","$L15","$L16","$L17"]}]]}]}],"$L18","$L19"]}],["$L1a","$L1b"],"$L1c"]}],"p":"$@1d","v":null,"s":"$a"}}]]
+f:[["children",{"s":"service-area","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}]}]]}],"p":"$@10","v":"$11","s":"$a"},"c":"$Q12"}]]
+b:[["children",{"s":"(public)","h":96,"d":{"r":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/adams-services-demo/_next/static/chunks/1uzw6t69o6zv4.js","async":true}]],["$","$Ld",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]]}]}]]}],"p":"$@e","v":null,"s":"$a"},"c":"$Qf"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/adams-services-demo/_next/static/chunks/28wof9-37d47y.css","precedence":"next"}],["$","script","script-0",{"src":"/adams-services-demo/_next/static/chunks/2xbrva1sp2916.js","async":true}],["$","script","script-1",{"src":"/adams-services-demo/_next/static/chunks/2fgr196c9iz-8.js","async":true}]],["$","html",null,{"lang":"en","className":"OLfJTG_variable OzeSLq_variable xUdJIq_variable h-full antialiased","children":["$","body",null,{"className":"min-h-full","children":["$","$L4",null,{"children":[["$","$5",null,{"fallback":null,"children":["$","$L6",null,{}]}],["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]]}]}]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1f",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L21",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Adams Services"}],["$","meta","1",{"name":"description","content":"Residential and commercial waste collection in Bastrop, Texas. Working prototype on sample data."}],["$","link","2",{"rel":"icon","href":"/adams-services-demo/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L22","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@23","v":null,"s":"$a"}},"a":"$@24","u":"$@25","b":"XlzVG5zwiJoOMTkbsY2fm"}
+26:"/adams-services-demo/_next/static/chunks/1cwa8e2pq4tcw.js"
+27:"/adams-services-demo/_next/static/chunks/2d699jo5p80r_.js"
+28:"AvailabilityCheck"
+29:I[47804,["$2","$3","$c","$26","$27"],"$28"]
+2a:I[97367,["$2","$3"],"OutletBoundary"]
+13:["$","td",null,{"className":"px-3 py-3","children":"Friday"}]
+14:["$","tr","78621",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78621"}],["$","td",null,{"className":"px-3 py-3","children":"Elgin / Cedar Creek"}],["$","td",null,{"className":"px-3 py-3","children":"Thursday"}]]}]
+15:["$","tr","78650",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78650"}],["$","td",null,{"className":"px-3 py-3","children":"McDade"}],["$","td",null,{"className":"px-3 py-3","children":"Thursday"}]]}]
+16:["$","tr","78659",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78659"}],["$","td",null,{"className":"px-3 py-3","children":"Paige"}],["$","td",null,{"className":"px-3 py-3","children":"Thursday"}]]}]
+17:["$","tr","78957",{"className":"border-t border-line","children":[["$","td",null,{"className":"px-3 py-3 font-semibold","children":"78957"}],["$","td",null,{"className":"px-3 py-3","children":"Smithville"}],["$","td",null,{"className":"px-3 py-3","children":"Wednesday"}]]}]
+18:["$","p",null,{"className":"mt-4 text-sm text-muted","children":"Thanksgiving Day, November 26, 2026, had no pickup. Friday, November 27 runs on schedule. Christmas Day has no pickup, and that route moves to the next business day."}]
+19:["$","div",null,{"className":"mt-8","children":["$","$L29",null,{}]}]
+1a:["$","script","script-0",{"src":"/adams-services-demo/_next/static/chunks/1cwa8e2pq4tcw.js","async":true}]
+1b:["$","script","script-1",{"src":"/adams-services-demo/_next/static/chunks/2d699jo5p80r_.js","async":true}]
+1c:["$","$L2a",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@2b"}]}]
+a:300
+2b:null
+25:true
+a:C
+24:0
+10:"$undefined"
+e:"$undefined"
+9:"$undefined"
+23:"$undefined"
+1d:"$undefined"

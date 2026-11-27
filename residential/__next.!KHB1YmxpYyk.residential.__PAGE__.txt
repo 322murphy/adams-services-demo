@@ -1,0 +1,39 @@
+1:"$Sreact.fragment"
+2:"/adams-services-demo/_next/static/chunks/2xbrva1sp2916.js"
+3:"/adams-services-demo/_next/static/chunks/2fgr196c9iz-8.js"
+4:I[47458,["$2","$3"],"DemoProvider"]
+5:"$Sreact.suspense"
+6:I[63532,["$2","$3"],"DemoBar"]
+7:I[39756,["$2","$3"],"default"]
+8:I[37457,["$2","$3"],"default"]
+c:"/adams-services-demo/_next/static/chunks/1uzw6t69o6zv4.js"
+d:I[47991,["$2","$3","$c"],"PublicShell"]
+18:"ViewportBoundary"
+19:I[97367,["$2","$3"],"$18"]
+1a:"MetadataBoundary"
+1b:I[97367,["$2","$3"],"$1a"]
+1c:I[27201,["$2","$3"],"IconMark"]
+:HL["/adams-services-demo/_next/static/chunks/28wof9-37d47y.css","style"]
+a:X
+11:X
+11:C
+12:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$1","c",{"children":[["$","article",null,{"className":"mx-auto max-w-3xl px-4 py-12","children":[["$","p",null,{"className":"text-sm font-semibold uppercase tracking-[0.16em] text-brand","children":"Bastrop, Texas"}],["$","h1",null,{"className":"mt-2 text-5xl tracking-wide","children":"Residential pickup"}],["$","p",null,{"className":"mt-4 text-lg text-muted","children":"Set the cart at the curb by 7:00 a.m. on your collection day. One cart is included on the residential plan."}],["$","ul",null,{"className":"mt-6 space-y-3","children":[["$","li","Cart sizes are 35, 65, and 95 gallon.",{"className":"rounded-xl border border-line bg-card px-4 py-3","children":"Cart sizes are 35, 65, and 95 gallon."}],["$","li","Extra carts are $10 and extra bags are $5 on the current rate. The driver records the count. The office rate sets the price.",{"className":"rounded-xl border border-line bg-card px-4 py-3","children":"Extra carts are $10 and extra bags are $5 on the current rate. The driver records the count. The office rate sets the price."}],["$","li","Household trash belongs in bags inside the cart. Paint, chemicals, tires, batteries, and concrete do not.",{"className":"rounded-xl border border-line bg-card px-4 py-3","children":"Household trash belongs in bags inside the cart. Paint, chemicals, tires, batteries, and concrete do not."}],"$L13"]}],"$L14","$L15"]}],null,"$L16"]}],"p":"$@17","v":null,"s":"$a"}}]]
+f:[["children",{"s":"residential","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}]}]]}],"p":"$@10","v":"$11","s":"$a"},"c":"$Q12"}]]
+b:[["children",{"s":"(public)","h":96,"d":{"r":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/adams-services-demo/_next/static/chunks/1uzw6t69o6zv4.js","async":true}]],["$","$Ld",null,{"children":["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]]}]}]]}],"p":"$@e","v":null,"s":"$a"},"c":"$Qf"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/adams-services-demo/_next/static/chunks/28wof9-37d47y.css","precedence":"next"}],["$","script","script-0",{"src":"/adams-services-demo/_next/static/chunks/2xbrva1sp2916.js","async":true}],["$","script","script-1",{"src":"/adams-services-demo/_next/static/chunks/2fgr196c9iz-8.js","async":true}]],["$","html",null,{"lang":"en","className":"OLfJTG_variable OzeSLq_variable xUdJIq_variable h-full antialiased","children":["$","body",null,{"className":"min-h-full","children":["$","$L4",null,{"children":[["$","$5",null,{"fallback":null,"children":["$","$L6",null,{}]}],["$","$L7",null,{"parallelRouterKey":"children","template":["$","$L8",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]]}]}]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L19",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L1b",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$5",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Adams Services"}],["$","meta","1",{"name":"description","content":"Residential and commercial waste collection in Bastrop, Texas. Working prototype on sample data."}],["$","link","2",{"rel":"icon","href":"/adams-services-demo/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L1c","3",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@1d","v":null,"s":"$a"}},"a":"$@1e","u":"$@1f","b":"XlzVG5zwiJoOMTkbsY2fm"}
+20:I[22016,["$2","$3","$c"],""]
+21:I[97367,["$2","$3"],"OutletBoundary"]
+13:["$","li","Thanksgiving Day, November 26, 2026, had no pickup. The Friday, November 27 route runs on schedule. Christmas Day has no pickup. That route runs the next business day.",{"className":"rounded-xl border border-line bg-card px-4 py-3","children":"Thanksgiving Day, November 26, 2026, had no pickup. The Friday, November 27 route runs on schedule. Christmas Day has no pickup. That route runs the next business day."}]
+14:["$","p",null,{"className":"mt-6 text-sm text-muted","children":["Residential ","$$32.00"," / month. Commercial ","$$120.00"," / month."," ",["$","$L20",null,{"href":"/pricing","className":"font-semibold text-brand","children":"See pricing"}]]}]
+15:["$","$L20",null,{"href":"/start","className":"mt-6 inline-flex h-11 items-center rounded-md bg-brand px-4 font-semibold text-white","children":"Start service"}]
+16:["$","$L21",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@22"}]}]
+a:300
+22:null
+1f:true
+a:C
+1e:0
+10:"$undefined"
+e:"$undefined"
+9:"$undefined"
+1d:"$undefined"
+17:"$undefined"
