@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f3ebdc;
+  --foreground: #1a140e;
+  --card: #fffaf0;
+  --ink: #17120d;
+  --muted: #6b5d4d;
+  --line: #e0d2b9;
+  --brand: #b3141c;
+  --brand-dark: #8a0f15;
+  --sand: #eadcc3;
+  --cream: #f6eedf;
+  --sepia: #c9a46a;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-sand: var(--sand);
+  --color-cream: var(--cream);
+  --color-sepia: var(--sepia);
+  --font-sans: var(--font-source), "Source Sans 3", ui-sans-serif, sans-serif;
+  --font-display: var(--font-oswald), Oswald, ui-sans-serif, sans-serif;
+  --font-brand: var(--font-alfa), "Alfa Slab One", Georgia, serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+.font-display {
+  font-family: var(--font-display);
+}
+
+.brand-heading,
+.font-brand {
+  font-family: var(--font-alfa), "Alfa Slab One", Georgia, serif;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.public-site h1,
+.public-site h2,
+.public-site h3 {
+  font-family: var(--font-alfa), "Alfa Slab One", Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.brush-rule {
+  height: 6px;
+  width: 72px;
+  background: var(--brand);
+  clip-path: polygon(0 40%, 100% 0, 96% 100%, 4% 75%);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
 }
