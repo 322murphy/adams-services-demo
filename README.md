@@ -2,6 +2,8 @@
 
 Working prototype of the Adams Services waste operating system for a client meeting. Sample customers, sample invoices, and demo payments. It does not call Stripe, maps, or a texting service.
 
+Live demo: https://322murphy.github.io/adams-services-demo/
+
 ## Run
 
 ```bash

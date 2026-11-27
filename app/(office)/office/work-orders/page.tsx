@@ -7,6 +7,7 @@ import { StatusPill } from "@/components/status-pill";
 import { Select } from "@/components/ui/input";
 import { formatWhen } from "@/lib/format";
 import { useDemo } from "@/lib/demo-store";
+import { customerHref } from "@/lib/hrefs";
 
 export default function WorkOrdersPage() {
   const { state } = useDemo();
@@ -33,7 +34,7 @@ export default function WorkOrdersPage() {
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <p className="font-semibold">{order.number} · {order.type}</p>
-                  {customer ? <Link href={`/office/customers/${customer.id}`} className="text-sm font-semibold text-brand">{customer.name}</Link> : null}
+                  {customer ? <Link href={customerHref(customer.id)} className="text-sm font-semibold text-brand">{customer.name}</Link> : null}
                   <p className="text-sm text-muted">{order.instructions}</p>
                   <p className="text-xs text-muted">{formatWhen(order.createdAt)} · {order.priority} priority</p>
                 </div>

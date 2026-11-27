@@ -7,6 +7,7 @@ import { StatusPill } from "@/components/status-pill";
 import { DataTable, Td, Th } from "@/components/ui/table";
 import { invoiceBalanceCents, invoiceTotalCents } from "@/lib/billing";
 import { formatCents, formatDay } from "@/lib/format";
+import { invoiceHref } from "@/lib/hrefs";
 import { useDemo } from "@/lib/demo-store";
 import { isPastDue } from "@/lib/reduce";
 
@@ -49,7 +50,7 @@ export default function BillingPage() {
             const balance = invoiceBalanceCents(invoice, state.payments);
             return (
               <tr key={invoice.id}>
-                <Td><Link className="font-semibold text-brand" href={`/office/billing/${invoice.id}`}>{invoice.number}</Link></Td>
+                <Td><Link className="font-semibold text-brand" href={invoiceHref(invoice.id)}>{invoice.number}</Link></Td>
                 <Td>{customer?.name}</Td>
                 <Td>{formatDay(invoice.issuedOn)}</Td>
                 <Td>{formatDay(invoice.dueOn)}{isPastDue(invoice, state.payments) ? " · past due" : ""}</Td>

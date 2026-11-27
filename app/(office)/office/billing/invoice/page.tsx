@@ -1,18 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { ChargeCard } from "@/components/charge-card";
 import { OfficeHeader } from "@/components/office-shell";
 import { StatusPill } from "@/components/status-pill";
 import { Button } from "@/components/ui/button";
 import { invoiceBalanceCents, invoiceTotalCents } from "@/lib/billing";
 import { formatCents, formatDay, formatWhen } from "@/lib/format";
+import { customerHref } from "@/lib/hrefs";
 import { useDemo } from "@/lib/demo-store";
 
-export default function InvoicePage() {
-  const params = useParams();
-  const id = Array.isArray(params.id) ? params.id[0] : params.id;
+function InvoiceDetail() {
+  const id = useSearchParams().get("id") ?? "";
   const { state, approveCharge, rejectCharge, payInvoice } = useDemo();
   const invoice = state.invoices.find((item) => item.id === id);
 
@@ -42,7 +43,7 @@ export default function InvoicePage() {
         <StatusPill value={invoice.status} />
         <span className="text-sm text-muted">Issued {formatDay(invoice.issuedOn)} · Due {formatDay(invoice.dueOn)}</span>
       </div>
-      {customer ? <Link href={`/office/customers/${customer.id}`} className="text-sm font-semibold text-brand">Open account</Link> : null}
+      {customer ? <Link href={customerHref(customer.id)} className="text-sm font-semibold text-brand">Open account</Link> : null}
 
       <div className="mt-4 space-y-3">
         {charges.filter((charge) => charge.status === "pending").map((charge) => (
@@ -107,5 +108,13 @@ export default function InvoicePage() {
         </section>
       ) : null}
     </div>
+  );
+}
+
+export default function InvoicePage() {
+  return (
+    <Suspense fallback={null}>
+      <InvoiceDetail />
+    </Suspense>
   );
 }

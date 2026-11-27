@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ROUTE } from "@/lib/catalog";
 import { invoiceBalanceCents } from "@/lib/billing";
 import { formatCents, formatWhen } from "@/lib/format";
+import { customerHref } from "@/lib/hrefs";
 import { useDemo } from "@/lib/demo-store";
 
 export default function DashboardPage() {
@@ -63,7 +64,7 @@ export default function DashboardPage() {
           <ul className="mt-3 space-y-2 text-sm">
             {upcoming.map((customer) => (
               <li key={customer.id}>
-                <Link href={`/office/customers/${customer.id}`} className="font-semibold text-brand">{customer.name}</Link>
+                <Link href={customerHref(customer.id)} className="font-semibold text-brand">{customer.name}</Link>
                 <span className="text-muted"> · {customer.accountNumber}</span>
               </li>
             ))}

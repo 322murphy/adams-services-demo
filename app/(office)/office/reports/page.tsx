@@ -4,6 +4,7 @@ import Link from "next/link";
 import { OfficeHeader } from "@/components/office-shell";
 import { invoiceBalanceCents, invoiceTotalCents } from "@/lib/billing";
 import { formatCents } from "@/lib/format";
+import { invoiceHref } from "@/lib/hrefs";
 import { useDemo } from "@/lib/demo-store";
 import type { CustomerStatus } from "@/lib/types";
 
@@ -53,7 +54,7 @@ export default function ReportsPage() {
             const customer = state.customers.find((item) => item.id === invoice.customerId);
             return (
               <li key={invoice.id}>
-                <Link href={`/office/billing/${invoice.id}`} className="font-semibold text-brand">{invoice.number}</Link>
+                <Link href={invoiceHref(invoice.id)} className="font-semibold text-brand">{invoice.number}</Link>
                 <span> · {customer?.name} · {formatCents(invoiceBalanceCents(invoice, state.payments))}</span>
               </li>
             );

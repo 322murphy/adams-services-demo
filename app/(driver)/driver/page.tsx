@@ -8,8 +8,10 @@ import { StatusPill } from "@/components/status-pill";
 import { calculateExtra } from "@/lib/billing";
 import { MARIA_INVOICE_ID, ROUTE, currentVersion, planById } from "@/lib/catalog";
 import { formatCents } from "@/lib/format";
+import { invoiceHref } from "@/lib/hrefs";
 import { useDemo } from "@/lib/demo-store";
 import { SAMPLE_EVIDENCE_NAME, SAMPLE_EVIDENCE_URL } from "@/lib/sample-evidence";
+import { RouteTimeline, ServiceMap } from "@/components/service-map";
 import type { CollectionResult, RouteStop } from "@/lib/types";
 
 export default function DriverPage() {
@@ -21,7 +23,17 @@ export default function DriverPage() {
 
   return (
     <div className="bg-sand px-3 py-6">
-      <div className="mx-auto w-full max-w-[420px] overflow-hidden rounded-[28px] border border-ink bg-card shadow-xl">
+      <div className="mx-auto grid w-full max-w-6xl gap-4 lg:grid-cols-[minmax(0,1fr)_420px]">
+        <section className="space-y-4">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.16em] text-brand">TODAY&apos;S ROUTE</p>
+            <h1 className="text-3xl tracking-wide">{ROUTE.name}</h1>
+            <p className="text-sm text-muted">{done} of {stops.length} recorded · follow the numbers</p>
+          </div>
+          <ServiceMap variant="route" customers={state.customers} properties={state.properties} stops={stops} />
+          <RouteTimeline customers={state.customers} properties={state.properties} stops={stops} />
+        </section>
+      <div className="h-fit overflow-hidden rounded-[28px] border border-ink bg-card shadow-xl">
         <header className="bg-ink px-4 py-4 text-cream">
           <p className="text-xs tracking-[0.16em] text-red-200">DRIVER</p>
           <h1 className="text-3xl tracking-wide text-white">{ROUTE.name}</h1>
@@ -37,7 +49,7 @@ export default function DriverPage() {
               ) : (
                 <p>No extra charge.</p>
               )}
-              <Link href={`/office/billing/${MARIA_INVOICE_ID}`} className="mt-1 inline-block font-semibold text-brand">Review it in the office</Link>
+              <Link href={invoiceHref(MARIA_INVOICE_ID)} className="mt-1 inline-block font-semibold text-brand">Review it in the office</Link>
             </div>
           ) : null}
           {last?.status === "duplicate" ? <p className="rounded-xl bg-sand p-3 text-sm">That stop was already recorded. It was not charged again.</p> : null}
@@ -52,10 +64,11 @@ export default function DriverPage() {
           <div className="space-y-2">
             {stops.map((stop) => {
               const customer = state.customers.find((item) => item.id === stop.customerId);
+              const property = state.properties.find((item) => item.id === stop.propertyId);
               const charge = state.charges.find((item) => item.stopId === stop.id);
               return (
                 <div key={stop.id} className="flex items-center justify-between gap-2 text-sm">
-                  <span>{stop.sequence}. {customer?.name}</span>
+                  <span>{stop.sequence}. {customer?.name} · {property?.line1.replace(/^\d+\s+/, "")}</span>
                   <span className="flex items-center gap-2">
                     {charge ? formatCents(charge.amountCents) : null}
                     <StatusPill value={stop.status} />
@@ -65,6 +78,7 @@ export default function DriverPage() {
             })}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
@@ -152,7 +166,7 @@ function StopForm({
         <p>Included: {rate.includedCarts} × {customer?.cartSize} gal cart</p>
         <p>Gate code: {property?.gateCode || "None on file"}</p>
         <p>{property?.instructions || "No special instructions."}</p>
-        <p className="text-muted">Service location on file {property?.lat.toFixed(3)}, {property?.lng.toFixed(3)}. Not live GPS.</p>
+        <p className="text-muted">This is stop {stop.sequence} on the route map.</p>
       </div>
       <Field label="Carts at the curb">
         <Input inputMode="numeric" className="h-14 text-lg" value={carts} onChange={(event) => setCarts(event.target.value)} />

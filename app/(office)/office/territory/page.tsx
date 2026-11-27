@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { OfficeHeader } from "@/components/office-shell";
+import { ServiceMap } from "@/components/service-map";
 import { StatusPill } from "@/components/status-pill";
-import { TERRITORY, projectPoint } from "@/lib/catalog";
+import { TERRITORY, territoryForZip } from "@/lib/catalog";
 import { useDemo } from "@/lib/demo-store";
+import { customerHref } from "@/lib/hrefs";
 
 export default function TerritoryPage() {
   const { state } = useDemo();
@@ -13,31 +15,15 @@ export default function TerritoryPage() {
 
   return (
     <div>
-      <OfficeHeader title="Territory" subtitle="Schematic service map for the meeting. It is not a live GPS feed." />
-      <div className="grid gap-4 lg:grid-cols-2">
-        <svg viewBox="0 0 400 260" className="h-auto w-full rounded-xl border border-line bg-[#e7f0e4]">
-          <path d="M48 48 L310 36 L360 90 L332 210 L70 220 Z" fill="#d7e7d1" stroke="#5f7d55" />
-          <text x="138" y="128" fontSize="13" fill="#3d5a40">Bastrop service area</text>
-          {inside.map((property) => {
-            const point = projectPoint(property.lat, property.lng);
-            if (!point.inside) return null;
-            const customer = state.customers.find((item) => item.id === property.customerId);
-            return (
-              <g key={property.id}>
-                <circle cx={point.x} cy={point.y} r="6" fill="#1f3d2b" />
-                <title>{customer?.name}</title>
-              </g>
-            );
-          })}
-        </svg>
-        <div className="rounded-xl border border-line bg-card p-4">
-          <h2 className="text-2xl tracking-wide">ZIP coverage</h2>
-          <ul className="mt-3 space-y-1 text-sm">
-            {TERRITORY.map((row) => (
-              <li key={row.zip}>{row.zip} · {row.city} · {row.day}</li>
-            ))}
-          </ul>
-        </div>
+      <OfficeHeader title="Territory" subtitle="Collection days, towns, and today's numbered truck route." />
+      <ServiceMap variant="territory" customers={state.customers} properties={state.properties} stops={state.stops} />
+      <div className="mt-4 rounded-xl border border-line bg-card p-4">
+        <h2 className="text-2xl tracking-wide">ZIP coverage</h2>
+        <ul className="mt-3 grid gap-1 text-sm sm:grid-cols-2">
+          {TERRITORY.map((row) => (
+            <li key={row.zip}>{row.zip} · {row.city} · {row.day}</li>
+          ))}
+        </ul>
       </div>
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
         <section>
@@ -48,8 +34,8 @@ export default function TerritoryPage() {
               if (!customer) return null;
               return (
                 <li key={property.id} className="rounded-lg border border-line bg-card px-3 py-2">
-                  <Link href={`/office/customers/${customer.id}`} className="font-semibold text-brand">{customer.name}</Link>
-                  <span className="text-muted"> · {property.zip} · {property.city}</span>
+                  <Link href={customerHref(customer.id)} className="font-semibold text-brand">{customer.name}</Link>
+                  <span className="text-muted"> · {property.city} {property.zip} · {territoryForZip(property.zip)?.day}</span>
                   <span className="ml-2"><StatusPill value={customer.status} /></span>
                 </li>
               );
@@ -65,7 +51,7 @@ export default function TerritoryPage() {
               if (!customer) return null;
               return (
                 <li key={property.id} className="rounded-lg border border-line bg-card px-3 py-2">
-                  <Link href={`/office/customers/${customer.id}`} className="font-semibold text-brand">{customer.name}</Link>
+                  <Link href={customerHref(customer.id)} className="font-semibold text-brand">{customer.name}</Link>
                   <span className="text-muted"> · {property.city} {property.zip}</span>
                 </li>
               );

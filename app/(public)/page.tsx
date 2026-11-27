@@ -5,6 +5,8 @@ import { AvailabilityCheck } from "@/components/availability-check";
 import { COMPANY, PLANS, currentVersion } from "@/lib/catalog";
 import { formatCents } from "@/lib/format";
 
+const hero = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand-hero.jpg`;
+
 const services = [
   { href: "/residential", title: "Residential", text: "Weekly curbside carts for houses in the service area." },
   { href: "/commercial", title: "Commercial", text: "Carts and small dumpsters for shops and offices." },
@@ -33,7 +35,7 @@ export default function HomePage() {
 
       <section className="relative h-[clamp(520px,82vh,800px)] overflow-hidden bg-ink">
         <Image
-          src="/brand-hero.jpg"
+          src={hero}
           alt="Adams Services. A cowboy kneels by his horse below a cross on the hill. Call 512-718-1555."
           fill
           priority
@@ -92,7 +94,7 @@ export default function HomePage() {
       </section>
 
       <section className="relative overflow-hidden bg-ink text-cream">
-        <Image src="/brand-hero.jpg" alt="" fill sizes="100vw" className="object-cover opacity-15" style={{ objectPosition: "50% 85%" }} />
+        <Image src={hero} alt="" fill sizes="100vw" className="object-cover opacity-15" style={{ objectPosition: "50% 85%" }} />
         <div className="relative mx-auto max-w-6xl px-4 py-16">
           <div className="brush-rule" />
           <h2 className="brand-heading mt-4 text-3xl text-cream md:text-4xl">Plans</h2>

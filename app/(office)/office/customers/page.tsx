@@ -10,6 +10,7 @@ import { DataTable, Td, Th } from "@/components/ui/table";
 import { planById } from "@/lib/catalog";
 import { customersToCsv, downloadText } from "@/lib/csv";
 import { useDemo } from "@/lib/demo-store";
+import { customerHref } from "@/lib/hrefs";
 import type { CustomerStatus, CustomerType } from "@/lib/types";
 
 const statuses: Array<CustomerStatus | "all"> = ["all", "lead", "pending", "active", "hold", "suspended", "canceled", "archived"];
@@ -85,7 +86,7 @@ export default function CustomersPage() {
               const property = state.properties.find((item) => item.customerId === customer.id);
               return (
                 <tr key={customer.id} className="hover:bg-sand/50">
-                  <Td><Link className="font-semibold text-brand" href={`/office/customers/${customer.id}`}>{customer.accountNumber}</Link></Td>
+                  <Td><Link className="font-semibold text-brand" href={customerHref(customer.id)}>{customer.accountNumber}</Link></Td>
                   <Td>{customer.name}</Td>
                   <Td className="capitalize">{customer.type}</Td>
                   <Td><StatusPill value={customer.status} /></Td>

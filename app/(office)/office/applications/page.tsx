@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { planById } from "@/lib/catalog";
 import { formatWhen } from "@/lib/format";
 import { useDemo } from "@/lib/demo-store";
+import { customerHref } from "@/lib/hrefs";
 
 export default function ApplicationsPage() {
   const { state, approveApplication } = useDemo();
@@ -35,7 +36,7 @@ export default function ApplicationsPage() {
               ) : null}
               {application.status === "inquiry" ? <p className="text-sm text-muted">Outside the service area. No subscription is created.</p> : null}
               {application.status === "approved" && application.customerId ? (
-                <Link href={`/office/customers/${application.customerId}`} className="text-sm font-semibold text-brand">Open the account</Link>
+                <Link href={customerHref(application.customerId)} className="text-sm font-semibold text-brand">Open the account</Link>
               ) : null}
             </div>
           </article>

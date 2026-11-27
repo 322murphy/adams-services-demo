@@ -8,6 +8,7 @@ import { Select } from "@/components/ui/input";
 import { DataTable, Td, Th } from "@/components/ui/table";
 import { EQUIPMENT } from "@/lib/catalog";
 import { useDemo } from "@/lib/demo-store";
+import { customerHref } from "@/lib/hrefs";
 
 export default function EquipmentPage() {
   const { state } = useDemo();
@@ -49,7 +50,7 @@ export default function EquipmentPage() {
                 <Td><StatusPill value={item.status} /></Td>
                 <Td>{item.condition}</Td>
                 <Td>
-                  {customer ? <Link className="font-semibold text-brand" href={`/office/customers/${customer.id}`}>{customer.name}</Link> : "Yard"}
+                  {customer ? <Link className="font-semibold text-brand" href={customerHref(customer.id)}>{customer.name}</Link> : "Yard"}
                 </Td>
               </tr>
             );

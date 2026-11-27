@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense, useState } from "react";
 import { OfficeHeader } from "@/components/office-shell";
 import { StatusPill } from "@/components/status-pill";
 import { Button } from "@/components/ui/button";
@@ -10,11 +10,11 @@ import { Textarea } from "@/components/ui/input";
 import { currentVersion, planById, territoryForZip } from "@/lib/catalog";
 import { invoiceBalanceCents } from "@/lib/billing";
 import { formatCents, formatDay, formatWhen } from "@/lib/format";
+import { invoiceHref } from "@/lib/hrefs";
 import { useDemo } from "@/lib/demo-store";
 
-export default function CustomerDetailPage() {
-  const params = useParams();
-  const id = Array.isArray(params.id) ? params.id[0] : params.id;
+function CustomerDetail() {
+  const id = useSearchParams().get("id") ?? "";
   const { state, addNote, activateCustomer } = useDemo();
   const [note, setNote] = useState("");
   const customer = state.customers.find((item) => item.id === id);
@@ -87,7 +87,7 @@ export default function CustomerDetailPage() {
           <ul className="mt-3 space-y-2 text-sm">
             {invoices.map((invoice) => (
               <li key={invoice.id}>
-                <Link href={`/office/billing/${invoice.id}`} className="font-semibold text-brand">{invoice.number}</Link>
+                <Link href={invoiceHref(invoice.id)} className="font-semibold text-brand">{invoice.number}</Link>
                 <span className="text-muted"> · balance {formatCents(invoiceBalanceCents(invoice, state.payments))}</span>
               </li>
             ))}
@@ -138,5 +138,13 @@ export default function CustomerDetailPage() {
         </ul>
       </section>
     </div>
+  );
+}
+
+export default function CustomerDetailPage() {
+  return (
+    <Suspense fallback={null}>
+      <CustomerDetail />
+    </Suspense>
   );
 }
